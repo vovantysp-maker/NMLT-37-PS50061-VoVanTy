@@ -12,7 +12,7 @@ int main(){
     else
     {
         float x = (float)(-b) / a;
-        printf("Nghiem cua phuong trinh la: %.2f\n", x);
+        printf("phuong trinh %dx + %d = 0 co nghiem la: %.2f\n", a, b, x);
     }
     return 0;
 }
