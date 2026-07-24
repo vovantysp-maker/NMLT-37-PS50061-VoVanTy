@@ -32,6 +32,31 @@ void chucNang1() {
         printf("Trung binh cong: %.2f\n", trungBinh);
     }
 }
+void chucNang2() {
+    int x;
+    printf("\n--- CHUC NANG 2: KIEM TRA SO NGUYEN TO ---\n");
+    printf("Nhap vao so nguyen x: ");
+    scanf("%d", &x);
+
+    if (x < 2) {
+        printf("So %d KHONG PHAI la so nguyen to.\n", x);
+        return;
+    }
+
+    int laSoNguyenTo = 1; 
+    for (int i = 2; i <= sqrt(x); i++) {
+        if (x % i == 0) {
+            laSoNguyenTo = 0;
+            break;
+        }
+    }
+
+    if (laSoNguyenTo) {
+        printf("So %d LA so nguyen to.\n", x);
+    } else {
+        printf("So %d KHONG PHAI la so nguyen to.\n", x);
+    }
+}
 int main() {
     int luaChon;
     do {
