@@ -57,6 +57,31 @@ void chucNang2() {
         printf("So %d KHONG PHAI la so nguyen to.\n", x);
     }
 }
+void chucNang3() {
+    int x;
+    printf("\n--- CHUC NANG 3: KIEM TRA SO CHINH PHUONG ---\n");
+    printf("Nhap vao so nguyen x: ");
+    scanf("%d", &x);
+
+    if (x <= 0) {
+        printf("So %d KHONG PHAI la so chinh phuong.\n", x);
+        return;
+    }
+
+    int laSoChinhPhuong = 0;
+    for (int i = 1; i <= x; i++) {
+        if (i * i == x) {
+            laSoChinhPhuong = 1;
+            break; 
+        }
+    }
+
+    if (laSoChinhPhuong) {
+        printf("So %d LA so chinh phuong.\n", x);
+    } else {
+        printf("So %d KHONG PHAI la so chinh phuong.\n", x);
+    }
+}
 int main() {
     int luaChon;
     do {
